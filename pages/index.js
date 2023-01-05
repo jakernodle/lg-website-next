@@ -41,6 +41,8 @@ const styles = {
     marginLeft: 'auto',
     marginRight: 'auto',
     position: 'relative',
+    display: 'block',
+    alignItems: 'center',
     width: '56%',
     aspectRatio:'6',
     margin: 20,
