@@ -193,7 +193,7 @@ function Home() {
                 color: "#000",
                 fontSize: '26px',
                 paddingBottom: '24px',
-              }}>Add your farm or refer someone else's. Get $100 when they fullfill their first order.</Typography>
+              }}>Add your farm or refer someone else&apos;s. Get $100 when they fullfill their first order.</Typography>
               <form onSubmit={handleSubmit}>
                 <div style={styles.rowContainer}>
                   <TextField
