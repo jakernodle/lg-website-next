@@ -6,7 +6,7 @@ import Image from 'next/image'
 import { Button, Typography, TextField, InputAdornment } from '@mui/material';
 import { StyleRoot } from 'radium';
 import { useEffect } from 'react';
-import { Helmet } from 'react-helmet';
+import Head from 'next/head';
 
 const handleSubmit = (e) => {
   e.preventDefault();    //This is important, i'm not sure why, but the email won't send without it
@@ -138,10 +138,14 @@ function Home() {
   return (
     <StyleRoot>
       <div style={styles.App}>
-        <Helmet>
-            <title>Find NC Farmers</title>
-            <meta name="description" content="Tired of going to the North Carolina farmers market? Locally Grown is an easy way to find NC farms selling meat, produce, and dairy." />
-        </Helmet>
+        <Head>
+          <title>Find NC Farmers</title>
+          <meta
+            name="description"
+            content="Tired of going to the North Carolina farmers market? Locally Grown is an easy way to find NC farms selling meat, produce, and dairy."
+            key="desc"
+          />
+        </Head>
         <header tyle={styles.AppHeader}>
           <div style={styles.logoDiv}>
             <Image src={logo} layout='fill' objectFit='contain' alt="local farms logo" />
