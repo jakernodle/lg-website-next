@@ -38,15 +38,14 @@ const styles = {
   },
   main: { width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', backgroundColor: 'rgba(0,0,0,0.05)'},
   logoDiv: {
-    marginLeft: 'auto',
-    marginRight: 'auto',
+    width: '56%',
     position: 'relative',
     display: 'block',
     alignItems: 'center',
-    width: '56%',
     aspectRatio:'6',
-    margin: 20,
-    marginTop: 60,
+    marginTop: '60px',
+    marginLeft: 'auto',
+    marginRight: 'auto',
     '@media (max-width: 480px)': {
       width: '90%',
     },
@@ -139,7 +138,7 @@ function Home() {
     <StyleRoot>
       <div style={styles.App}>
         <Head>
-          <title>Find NC Farmers</title>
+          <title>Find NC farmers selling meat, produce, eggs and dairy.</title>
           <meta
             name="description"
             content="Tired of going to the North Carolina farmers market? Locally Grown is an easy way to find NC farms selling meat, produce, and dairy."
