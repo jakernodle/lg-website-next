@@ -1,6 +1,6 @@
 import { Typography } from '@mui/material';
 import { useRouter } from 'next/router';
-import FarmerIcon from '../../public/assets/farmer-whitebg-svgrepo-com.svg';
+import FarmerIcon from '../public/assets/farmer-whitebg-svgrepo-com.svg';
 import Image from 'next/image'
 
 function FarmListItem(props){

@@ -1,6 +1,6 @@
-import ProduceIcon from '../../public/assets/carrot-svgrepo-com.svg';
-import DairyIcon from '../../public/assets/cow-svgrepo-com.svg';
-import MeetIcon from '../../public/assets/sausage-meat-svgrepo-com.svg';
+import ProduceIcon from '../public/assets/carrot-svgrepo-com.svg';
+import DairyIcon from '../public/assets/cow-svgrepo-com.svg';
+import MeetIcon from '../public/assets/sausage-meat-svgrepo-com.svg';
 import { Typography } from '@mui/material';
 import { useState } from 'react';
 import { StyleRoot } from 'radium';

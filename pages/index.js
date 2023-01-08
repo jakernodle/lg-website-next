@@ -2,7 +2,7 @@ import logo from '../public/assets/Locallygrowntextlabel.png';
 import previewImage from '../public/assets/locally-grown-preview.png';
 import emailjs from 'emailjs-com';
 import Image from 'next/image'
-import FarmSearchBar from './components/FarmSearchBar';
+import FarmSearchBar from '../components/FarmSearchBar';
 import { Button, Typography, TextField, InputAdornment } from '@mui/material';
 import { StyleRoot } from 'radium';
 import { useEffect } from 'react';

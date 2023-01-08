@@ -1,4 +1,4 @@
-import SearchIcon from '../../public/assets/search-icon.svg';
+import SearchIcon from '../public/assets/search-icon.svg';
 import Image from 'next/image'
 import { useState } from 'react';
 import { Popper, Button } from '@mui/material';

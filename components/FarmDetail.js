@@ -1,5 +1,5 @@
 import { Typography, Button } from '@mui/material';
-import FarmerIcon from '../../public/assets/farmer-whitebg-svgrepo-com.svg';
+import FarmerIcon from '../public/assets/farmer-whitebg-svgrepo-com.svg';
 import { StyleRoot } from 'radium';
 
 function FarmDetail(props){

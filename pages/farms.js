@@ -1,10 +1,10 @@
-import Feed from "./components/FarmFeed";
-import FarmSearchBar from "./components/FarmSearchBar";
+import Feed from "../components/FarmFeed";
+import FarmSearchBar from "../components/FarmSearchBar";
 import { useState, useEffect, useLayoutEffect, useRef } from "react";
 import farmList from "../public/data/farmData";
-import FarmCategories from "./components/FarmCategorys";
+import FarmCategories from "../components/FarmCategorys";
 import Drawer from '@mui/material/Drawer';
-import FarmDetail from "./components/FarmDetail";
+import FarmDetail from "../components/FarmDetail";
 import { useRouter } from 'next/router';
 import Head from 'next/head';
 
