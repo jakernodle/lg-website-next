@@ -15,4 +15,304 @@
 
    </url>
 
+   <url>
+
+      <loc>https://www.locallygrown.app/farms</loc>
+
+      <lastmod>2022-12-17</lastmod>
+
+      <changefreq>weekly</changefreq>
+
+      <priority>0.8</priority>
+
+   </url>
+
+   <!-- Search Location URL's -->
+   <url>
+
+      <loc>https://www.locallygrown.app/farms/Raleigh/35.7795897/-78.6381787</loc>
+
+      <lastmod>2022-12-17</lastmod>
+
+      <changefreq>weekly</changefreq>
+
+   </url>
+
+   <url>
+
+      <loc>https://www.locallygrown.app/farms/Charlotte/35.2270869/-80.8431267</loc>
+
+      <lastmod>2022-12-17</lastmod>
+
+      <changefreq>weekly</changefreq>
+
+   </url>
+
+   <url>
+
+      <loc>https://www.locallygrown.app/farms/Asheville/35.5950581/-82.5514869</loc>
+
+      <lastmod>2022-12-17</lastmod>
+
+      <changefreq>weekly</changefreq>
+
+   </url>
+
+   <url>
+
+      <loc>https://www.locallygrown.app/farms/Durham/35.9940329/-78.898619</loc>
+
+      <lastmod>2022-12-17</lastmod>
+
+      <changefreq>weekly</changefreq>
+
+   </url>
+
+   <url>
+
+      <loc>https://www.locallygrown.app/farms/Winston-Salem/36.09985959999999/-80.244216</loc>
+
+      <lastmod>2022-12-17</lastmod>
+
+      <changefreq>weekly</changefreq>
+
+   </url>
+
+   <url>
+
+      <loc>https://www.locallygrown.app/farms/Greensboro/36.0726354/-79.7919754</loc>
+
+      <lastmod>2022-12-17</lastmod>
+
+      <changefreq>weekly</changefreq>
+
+   </url>
+
+   <url>
+
+      <loc>https://www.locallygrown.app/farms/Chapel%20Hill/35.9131996/-79.0558445</loc>
+
+      <lastmod>2022-12-17</lastmod>
+
+      <changefreq>weekly</changefreq>
+
+   </url>
+
+   <url>
+
+      <loc>https://www.locallygrown.app/farms/Hickory/35.7344538/-81.3444573</loc>
+
+      <lastmod>2022-12-17</lastmod>
+
+      <changefreq>weekly</changefreq>
+
+   </url>
+
+   <url>
+
+      <loc>https://www.locallygrown.app/farms/Cary/35.79154/-78.7811169</loc>
+
+      <lastmod>2022-12-17</lastmod>
+
+      <changefreq>weekly</changefreq>
+
+   </url>
+
+   <url>
+
+      <loc>https://www.locallygrown.app/farms/Fayetteville/35.0526641/-78.87835849999999</loc>
+
+      <lastmod>2022-12-17</lastmod>
+
+      <changefreq>weekly</changefreq>
+
+   </url>
+
+   <!-- Farm Page URL's -->
+
+   <url>
+          <loc>https://www.locallygrown.app/farms/coon-rock-farm-hillsborough-north-carolina</loc>
+          <lastmod>2022-12-17</lastmod>
+          <changefreq>weekly</changefreq>
+    </url>    
+    <url>
+          <loc>https://www.locallygrown.app/farms/cohen-farm-pittsboro-north-carolina</loc>
+          <lastmod>2022-12-17</lastmod>
+          <changefreq>weekly</changefreq>
+    </url>    
+    <url>
+          <loc>https://www.locallygrown.app/farms/little-way-farm-siler-city-north-carolina</loc>
+          <lastmod>2022-12-17</lastmod>
+          <changefreq>weekly</changefreq>
+    </url>    
+    <url>
+          <loc>https://www.locallygrown.app/farms/our-local-farm-smithfield-north-carolina</loc>
+          <lastmod>2022-12-17</lastmod>
+          <changefreq>weekly</changefreq>
+    </url>    
+    <url>
+          <loc>https://www.locallygrown.app/farms/mistyridge-farm-princeton-north-carolina</loc>
+          <lastmod>2022-12-17</lastmod>
+          <changefreq>weekly</changefreq>
+    </url>    
+    <url>
+          <loc>https://www.locallygrown.app/farms/fickle-creek-farm-efland-north-carolina</loc>
+          <lastmod>2022-12-17</lastmod>
+          <changefreq>weekly</changefreq>
+    </url>    
+    <url>
+          <loc>https://www.locallygrown.app/farms/ls-family-farms-nashville-north-carolina</loc>
+          <lastmod>2022-12-17</lastmod>
+          <changefreq>weekly</changefreq>
+    </url>    
+    <url>
+          <loc>https://www.locallygrown.app/farms/reverence-farms-saxapahaw-north-carolina</loc>
+          <lastmod>2022-12-17</lastmod>
+          <changefreq>weekly</changefreq>
+    </url>    
+    <url>
+          <loc>https://www.locallygrown.app/farms/minka-farm-llc-efland-north-carolina</loc>
+          <lastmod>2022-12-17</lastmod>
+          <changefreq>weekly</changefreq>
+    </url>    
+    <url>
+          <loc>https://www.locallygrown.app/farms/hawkfield-manor-timberlake-north-carolina</loc>
+          <lastmod>2022-12-17</lastmod>
+          <changefreq>weekly</changefreq>
+    </url>    
+    <url>
+          <loc>https://www.locallygrown.app/farms/crabtree-farm-goods-cedar-grove-north-carolina</loc>
+          <lastmod>2022-12-17</lastmod>
+          <changefreq>weekly</changefreq>
+    </url>    
+    <url>
+          <loc>https://www.locallygrown.app/farms/stone-house-farms-llc-red-oak-north-carolina</loc>
+          <lastmod>2022-12-17</lastmod>
+          <changefreq>weekly</changefreq>
+    </url>    
+    <url>
+          <loc>https://www.locallygrown.app/farms/terrace-ridge-farm-carthage-north-carolina</loc>
+          <lastmod>2022-12-17</lastmod>
+          <changefreq>weekly</changefreq>
+    </url>    
+    <url>
+          <loc>https://www.locallygrown.app/farms/five-points-csa-raleigh-north-carolina</loc>
+          <lastmod>2022-12-17</lastmod>
+          <changefreq>weekly</changefreq>
+    </url>    
+    <url>
+          <loc>https://www.locallygrown.app/farms/franchescas-dawn-farm-halifax-virginia</loc>
+          <lastmod>2022-12-17</lastmod>
+          <changefreq>weekly</changefreq>
+    </url>    
+    <url>
+          <loc>https://www.locallygrown.app/farms/ninja-cow-farm-llc-raleigh-north-carolina</loc>
+          <lastmod>2022-12-17</lastmod>
+          <changefreq>weekly</changefreq>
+    </url>    
+    <url>
+          <loc>https://www.locallygrown.app/farms/poplar-creek-farm-raleigh-north-carolina</loc>
+          <lastmod>2022-12-17</lastmod>
+          <changefreq>weekly</changefreq>
+    </url>    
+    <url>
+          <loc>https://www.locallygrown.app/farms/rti-csa-program-hosted-by-rti-international-research-triangle-park-north-carolina</loc>
+          <lastmod>2022-12-17</lastmod>
+          <changefreq>weekly</changefreq>
+    </url>    
+    <url>
+          <loc>https://www.locallygrown.app/farms/smiths-nursery-inc-benson-north-carolina</loc>
+          <lastmod>2022-12-17</lastmod>
+          <changefreq>weekly</changefreq>
+    </url>    
+    <url>
+          <loc>https://www.locallygrown.app/farms/jireh-family-farm-durham-north-carolina</loc>
+          <lastmod>2022-12-17</lastmod>
+          <changefreq>weekly</changefreq>
+    </url>    
+    <url>
+          <loc>https://www.locallygrown.app/farms/wheeler-ranch-youngsville-north-carolina</loc>
+          <lastmod>2022-12-17</lastmod>
+          <changefreq>weekly</changefreq>
+    </url>    
+    <url>
+          <loc>https://www.locallygrown.app/farms/rare-earth-farms-llc-zebulon-north-carolina</loc>
+          <lastmod>2022-12-17</lastmod>
+          <changefreq>weekly</changefreq>
+    </url>    
+    <url>
+          <loc>https://www.locallygrown.app/farms/ray-family-farms-louisburg-north-carolina</loc>
+          <lastmod>2022-12-17</lastmod>
+          <changefreq>weekly</changefreq>
+    </url>    
+    <url>
+          <loc>https://www.locallygrown.app/farms/cambellcreek-organics-coats-north-carolina</loc>
+          <lastmod>2022-12-17</lastmod>
+          <changefreq>weekly</changefreq>
+    </url>    
+    <url>
+          <loc>https://www.locallygrown.app/farms/hogans-magnolia-view-farm-chapel-hill-north-carolina</loc>
+          <lastmod>2022-12-17</lastmod>
+          <changefreq>weekly</changefreq>
+    </url>    
+    <url>
+          <loc>https://www.locallygrown.app/farms/meadow-lane-farm--leonard-family-farm-louisburg-north-carolina</loc>
+          <lastmod>2022-12-17</lastmod>
+          <changefreq>weekly</changefreq>
+    </url>    
+    <url>
+          <loc>https://www.locallygrown.app/farms/green-button-farm-bahama-north-carolina</loc>
+          <lastmod>2022-12-17</lastmod>
+          <changefreq>weekly</changefreq>
+    </url>    
+    <url>
+          <loc>https://www.locallygrown.app/farms/cathis-farm-lillington-north-carolina</loc>
+          <lastmod>2022-12-17</lastmod>
+          <changefreq>weekly</changefreq>
+    </url>    
+    <url>
+          <loc>https://www.locallygrown.app/farms/double-r-cattle-services-inc-hillsborough-north-carolina</loc>
+          <lastmod>2022-12-17</lastmod>
+          <changefreq>weekly</changefreq>
+    </url>    
+    <url>
+          <loc>https://www.locallygrown.app/farms/lynch-creek-farm-kittrell-north-carolina</loc>
+          <lastmod>2022-12-17</lastmod>
+          <changefreq>weekly</changefreq>
+    </url>    
+    <url>
+          <loc>https://www.locallygrown.app/farms/lucky-3-farm-llc-louisburg-north-carolina</loc>
+          <lastmod>2022-12-17</lastmod>
+          <changefreq>weekly</changefreq>
+    </url>    
+    <url>
+          <loc>https://www.locallygrown.app/farms/the-star-barn-pittsboro-north-carolina</loc>
+          <lastmod>2022-12-17</lastmod>
+          <changefreq>weekly</changefreq>
+    </url>    <url>
+          <loc>https://www.locallygrown.app/farms/cooperlasley-farm-mebane-north-carolina</loc>
+          <lastmod>2022-12-17</lastmod>
+          <changefreq>weekly</changefreq>
+    </url>    
+    <url>
+          <loc>https://www.locallygrown.app/farms/parker-farms-hurdle-mills-north-carolina</loc>
+          <lastmod>2022-12-17</lastmod>
+          <changefreq>weekly</changefreq>
+    </url>    
+    <url>
+          <loc>https://www.locallygrown.app/farms/dorsey-ranch-louisburg-north-carolina</loc>
+          <lastmod>2022-12-17</lastmod>
+          <changefreq>weekly</changefreq>
+    </url>    
+    <url>
+          <loc>https://www.locallygrown.app/farms/holland-farm-warrenton-north-carolina</loc>
+          <lastmod>2022-12-17</lastmod>
+          <changefreq>weekly</changefreq>
+    </url>    
+    <url>
+          <loc>https://www.locallygrown.app/farms/grateful-acres-hurdle-mills-north-carolina</loc>
+          <lastmod>2022-12-17</lastmod>
+          <changefreq>weekly</changefreq>
+    </url>
+
 </urlset>

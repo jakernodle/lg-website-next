@@ -2,7 +2,7 @@ import logo from '../public/assets/Locallygrowntextlabel.png';
 import previewImage from '../public/assets/locally-grown-preview.png';
 import emailjs from 'emailjs-com';
 import Image from 'next/image'
-//import FarmSearchBar from './components/FarmSearchBar';
+import FarmSearchBar from './components/FarmSearchBar';
 import { Button, Typography, TextField, InputAdornment } from '@mui/material';
 import { StyleRoot } from 'radium';
 import { useEffect } from 'react';
@@ -150,7 +150,7 @@ function Home() {
             <Image src={logo} layout='fill' objectFit='contain' alt="local farms logo" />
           </div>
           <h1 style={styles.headerText}>Search North Carolina farms selling meat, produce, and dairy.</h1>
-          
+          <FarmSearchBar />
         </header>
         <div className="Preview-Div">
           <div style={styles.appPreviewRowDiv}>
