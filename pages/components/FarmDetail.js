@@ -46,7 +46,7 @@ function FarmDetail(props){
                         color: "#000",
                         paddingTop: 12
                         }}>All Products</Typography>
-                <ul>{props.selectedFarm.allProducts.map(product => (<li>{product}</li>))}</ul>
+                <ul>{props.selectedFarm.allProducts.map(product => (<li key={product}>{product}</li>))}</ul>
                 <div style={styles.rowDiv}>
                     <img 
                     style={styles.farmerImage}

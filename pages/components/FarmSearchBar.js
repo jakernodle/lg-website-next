@@ -196,7 +196,7 @@ function FarmSearchBar(props){
                     </div>
                     <Popper style={placePredictions.length > 0 ? styles.popper : styles.emptyPopper} placement="bottom-start" anchorEl={anchorEl} id={popperOpen ? 'simple-popper': undefined} open={popperOpen}>
                         <ul style={styles.list}>
-                            {placePredictions.map((place, index) => (<>
+                            {placePredictions.map((place, index) => (<div key={index}>
                                 <button style={styles.button} onClick={() => handlePlaceClick(index, place.description)}><h3>{place.description}</h3></button> 
                                 <div
                                 style={{
@@ -204,7 +204,7 @@ function FarmSearchBar(props){
                                 height: '.5px',
                                 marginRight: 40,
                                 }}/>
-                            </>))}
+                            </div>))}
                         </ul>
                     </Popper>
                 </div>
