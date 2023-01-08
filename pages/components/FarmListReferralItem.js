@@ -15,7 +15,7 @@ function FarmListReferralItem(props){
             <Typography variant="h6" style={{
                 color: "#000",
                 marginTop: "4px",
-            }}>Add your farm or refer someone else's. Get $100 when they fullfill their first order.</Typography> 
+            }}>Add your farm or refer someone else&apos;s. Get $100 when they fullfill their first order.</Typography> 
             <Button type="submit" href="https://i75br6n519w.typeform.com/to/gp4vAbgu" fullWidth variant="contained" 
                 style={{
                     //borderRadius: 35,

@@ -18,7 +18,7 @@ function Feed(props){
     return (
         <StyleRoot>
             <ul style={styles.list}>
-                {props.farms.map(farm => ( <FarmListItem farmData={farm} selectFarm={props.selectFarm} toggleDrawer={props.toggleDrawer}/>))}
+                {props.farms.map(farm => ( <FarmListItem key={farm.id} farmData={farm} selectFarm={props.selectFarm} toggleDrawer={props.toggleDrawer}/>))}
                 <FarmListReferralItem/>
             </ul>
         </StyleRoot>
