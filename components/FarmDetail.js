@@ -6,11 +6,12 @@ function FarmDetail(props){
 
     const styles = {
         main: { 
-            marginLeft: 'auto',
-            marginRight: 'auto',
+            margin: 'auto',
             paddingLeft: '20px',
             paddingRight: '20px',
             paddingTop:'20px',
+            paddingBottom:'20px',
+            borderRadius: 20,
             backgroundColor: '#fff',
             width: 480, 
             '@media (max-width: 480px)': {

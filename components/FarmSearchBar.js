@@ -16,6 +16,8 @@ function FarmSearchBar(props){
             top: 0,
             width: '100%',
             zIndex:'10',
+            paddingTop: '1px',
+            paddingBottom: '1px',
         },
         topBar: {
             marginRight: 'auto',

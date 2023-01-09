@@ -1,7 +1,7 @@
 import farmMap from '../../public/data/farmMap';
 import FarmDetail from "../../components/FarmDetail";
 import { StyleRoot } from 'radium';
-import { stepButtonClasses } from '@mui/material';
+import FarmSearchBar from '../../components/FarmSearchBar';
 import Head from 'next/head';
 
 // This function gets called at build time
@@ -31,10 +31,17 @@ export async function getStaticProps({ params }) {
 function Farm({ farm }){
 
     const styles = {
-        main: { 
+        main: {
+            paddingTop:'20px',
+            paddingBottom:'20px', 
             width: '100%',
             backgroundColor: 'rgba(0,0,0,0.05)'
         },
+        search: {
+            position: '-webkit-sticky',
+            position: 'sticky',
+            top: 0,
+        }
     };
 
     return (
@@ -51,8 +58,21 @@ function Farm({ farm }){
                 <meta name="geo.region" content="NC" />
                 <meta name="ICBM" content={farm.coordinates.latitude + "," + farm.coordinates.longitude} />
             </Head>
+            <div style={styles.search}>
+                <FarmSearchBar/>
+            </div>
             <div style={styles.main}>
+            <style global jsx>{`
+                html,
+                body,
+                body > div:first-child,
+                div#__next,
+                div#__next > div {
+                height: 100%;
+                }
+            `}</style>
                 <FarmDetail selectedFarm={farm}/>
+                
             </div>
         </StyleRoot>
     );
