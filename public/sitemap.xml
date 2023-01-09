@@ -30,7 +30,7 @@
    <!-- Search Location URL's -->
    <url>
 
-      <loc>https://www.locallygrown.app/farms?place=Raleigh&lat=35.7795897&long=-78.6381787</loc>
+      <loc>https://www.locallygrown.app/farms?place=Raleigh&amp;lat=35.7795897&amp;long=-78.6381787</loc>
 
       <lastmod>2022-12-17</lastmod>
 
@@ -40,7 +40,7 @@
 
    <url>
 
-      <loc>https://www.locallygrown.app/farms?place=Charlotte&lat=35.2270869&long=-80.8431267</loc>
+      <loc>https://www.locallygrown.app/farms?place=Charlotte&amp;lat=35.2270869&amp;long=-80.8431267</loc>
 
       <lastmod>2022-12-17</lastmod>
 
@@ -50,7 +50,7 @@
 
    <url>
 
-      <loc>https://www.locallygrown.app/farms?place=Asheville&lat=35.5950581&long=-82.5514869</loc>
+      <loc>https://www.locallygrown.app/farms?place=Asheville&amp;lat=35.5950581&amp;long=-82.5514869</loc>
 
       <lastmod>2022-12-17</lastmod>
 
@@ -60,7 +60,7 @@
 
    <url>
 
-      <loc>https://www.locallygrown.app/farms?place=Durham&lat=35.9940329&long=-78.898619</loc>
+      <loc>https://www.locallygrown.app/farms?place=Durham&amp;lat=35.9940329&amp;long=-78.898619</loc>
 
       <lastmod>2022-12-17</lastmod>
 
@@ -70,7 +70,7 @@
 
    <url>
 
-      <loc>https://www.locallygrown.app/farms?place=Winston-Salem&lat=36.09985959999999&long=-80.244216</loc>
+      <loc>https://www.locallygrown.app/farms?place=Winston-Salem&amp;lat=36.09985959999999&amp;long=-80.244216</loc>
 
       <lastmod>2022-12-17</lastmod>
 
@@ -80,7 +80,7 @@
 
    <url>
 
-      <loc>https://www.locallygrown.app/farms?place=Greensboro&lat=36.0726354&long=-79.7919754</loc>
+      <loc>https://www.locallygrown.app/farms?place=Greensboro&amp;lat=36.0726354&amp;long=-79.7919754</loc>
 
       <lastmod>2022-12-17</lastmod>
 
@@ -90,7 +90,7 @@
 
    <url>
 
-      <loc>https://www.locallygrown.app/farms?place=Chapel+Hill&lat=35.9131996&long=-79.0558445</loc>
+      <loc>https://www.locallygrown.app/farms?place=Chapel+Hill&amp;lat=35.9131996&amp;long=-79.0558445</loc>
 
       <lastmod>2022-12-17</lastmod>
 
@@ -100,7 +100,7 @@
 
    <url>
 
-      <loc>https://www.locallygrown.app/farms?place=Hickory&lat=35.7344538&long=-81.3444573</loc>
+      <loc>https://www.locallygrown.app/farms?place=Hickory&amp;lat=35.7344538&amp;long=-81.3444573</loc>
 
       <lastmod>2022-12-17</lastmod>
 
@@ -110,7 +110,7 @@
 
    <url>
 
-      <loc>https://www.locallygrown.app/farms?place=Cary&lat=35.79154&long=-78.7811169</loc>
+      <loc>https://www.locallygrown.app/farms?place=Cary&amp;lat=35.79154&amp;long=-78.7811169</loc>
 
       <lastmod>2022-12-17</lastmod>
 
@@ -120,7 +120,7 @@
 
    <url>
 
-      <loc>https://www.locallygrown.app/farms?place=Fayetteville&lat=35.0526641&long=-78.87835849999999</loc>
+      <loc>https://www.locallygrown.app/farms?place=Fayetteville&amp;lat=35.0526641&amp;long=-78.87835849999999</loc>
 
       <lastmod>2022-12-17</lastmod>
 
