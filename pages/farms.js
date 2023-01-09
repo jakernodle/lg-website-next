@@ -169,7 +169,7 @@ function Farms(){
         
         <div style={styles.main}>
             <Head>
-                <title>{ drawerOpen ? selectedFarm.name :"Farms near " + location }</title>
+                <title>{ drawerOpen ? selectedFarm.name :"Farms near " + place }</title>
                 <meta
                     name="description"
                     content= {drawerOpen ? selectedFarm.description : "Tired of going to the North Carolina farmers market? Locally Grown is an easy way to find NC farms selling meat, produce, and dairy."}
