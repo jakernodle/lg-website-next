@@ -5,12 +5,19 @@ import { StyleRoot } from 'radium';
 function FarmDetail(props){
 
     const styles = {
-        main: { width: 480, 
+        main: { 
+            marginLeft: 'auto',
+            marginRight: 'auto',
+            paddingLeft: '20px',
+            paddingRight: '20px',
+            paddingTop:'20px',
+            backgroundColor: '#fff',
+            width: 480, 
             '@media (max-width: 480px)': {
                 width: '100%',
             },
         },
-        headerImage: { padding: 0, height: 280, width: '100%', objectFit: 'cover' },
+        headerImage: { padding: 0, height: 280, width: '100%', objectFit: 'cover', borderRadius: 20 },
         content: { margin: 20 },
         farmerImage: { width: '16%', aspectRatio: 1,  borderRadius:"50%", objectFit: 'cover', border: '3px solid #D8D8D8', },
         rowDiv: { paddingTop: 20, display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'left'},

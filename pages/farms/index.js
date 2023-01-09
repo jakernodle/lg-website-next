@@ -1,10 +1,8 @@
-import Feed from "../components/FarmFeed";
-import FarmSearchBar from "../components/FarmSearchBar";
+import Feed from "../../components/FarmFeed";
+import FarmSearchBar from "../../components/FarmSearchBar";
 import { useState, useEffect, useLayoutEffect, useRef } from "react";
-import farmList from "../public/data/farmData";
-import FarmCategories from "../components/FarmCategorys";
-import Drawer from '@mui/material/Drawer';
-import FarmDetail from "../components/FarmDetail";
+import farmList from "../../public/data/farmData";
+import FarmCategories from "../../components/FarmCategorys";
 import { useRouter } from 'next/router';
 import Head from 'next/head';
 
@@ -166,7 +164,19 @@ function Farms(){
     return (
         //<img src={logo} style={styles.logo} alt="logo" />
         //<Typography variant="h3" style={styles.headerText}>Search North Carolina farms selling meat, produce, and dairy.</Typography>
-        
+        // <Drawer
+        //         anchor='right'
+        //         open={drawerOpen}
+        //         onClose={() => {
+        //             router.push({
+        //                 pathname:'/farms'}, undefined, { shallow: true })
+        //             setDrawerOpen(false)
+        //         }}
+        //     >
+        //         {drawerOpen == true && 
+        //         (<FarmDetail selectedFarm={selectedFarm}/>)
+        //         }
+        //     </Drawer>
         <div style={styles.main}>
             <Head>
                 <title>{ drawerOpen ? selectedFarm.name :"Farms near " + place }</title>
@@ -189,19 +199,6 @@ function Farms(){
                 }}>{(location != "") ? ("Showing farms near " + location) : ""}</h1>
             <FarmCategories categories={selectedCategories} selectCategory={setSelectedCategories}/>
             <Feed farms={sortedFarms} selectFarm={setSelectedFarm} toggleDrawer={setDrawerOpen}></Feed>
-            <Drawer
-                anchor='right'
-                open={drawerOpen}
-                onClose={() => {
-                    router.push({
-                        pathname:'/farms'}, undefined, { shallow: true })
-                    setDrawerOpen(false)
-                }}
-            >
-                {drawerOpen == true && 
-                (<FarmDetail selectedFarm={selectedFarm}/>)
-                }
-            </Drawer>
         </div>
     );
 }
