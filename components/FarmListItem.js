@@ -26,10 +26,8 @@ function FarmListItem(props){
     return (
         <li style={styles.mainDiv}>
             <button style={styles.button} onClick={()=>{
-                props.selectFarm(props.farmData)
                 const url = '/farms/' + props.farmData.id
                 router.push(url)
-                props.toggleDrawer(true)
             }}>
                 <img 
                 style={styles.headerImage}

@@ -144,6 +144,9 @@ function Home() {
             content="Tired of going to the North Carolina farmers market? Locally Grown is an easy way to find NC farms selling meat, produce, and dairy."
             key="desc"
           />
+          <meta name="geo.placename" content="North Carolina" />
+          <meta name="geo.region" content="NC" />
+          <meta name="keywords" content="farms, buy, local, food, farm, NC, farmers, market, North, Carolina, meat, beef, eggs, produce, sell" />
         </Head>
         <header tyle={styles.AppHeader}>
           <div style={styles.logoDiv}>

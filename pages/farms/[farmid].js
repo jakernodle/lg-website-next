@@ -53,9 +53,10 @@ function Farm({ farm }){
                     content= {farm.description}
                     key="desc"
                 />
+                <meta name="keywords" content={farm.allProducts.join(", ")} />
                 <meta name="geo.placename" content={farm.location} />
                 <meta name="geo.position" content={farm.coordinates.latitude + ";" + farm.coordinates.longitude} />
-                <meta name="geo.region" content="NC" />
+                <meta name="geo.region" content="North Carolina" />
                 <meta name="ICBM" content={farm.coordinates.latitude + "," + farm.coordinates.longitude} />
             </Head>
             <div style={styles.search}>

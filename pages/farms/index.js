@@ -6,6 +6,16 @@ import FarmCategories from "../../components/FarmCategorys";
 import { useRouter } from 'next/router';
 import Head from 'next/head';
 
+// This gets called on every request
+/*export async function getServerSideProps() {
+    // Fetch data from external API
+    const res = await fetch(`https://.../data`)
+    const data = await res.json()
+  
+    // Pass data to the page via props
+    return { props: { data } }
+}*/
+
 function Farms(){
 
     const styles = {
@@ -18,22 +28,7 @@ function Farms(){
 
     const router = useRouter();
 
-    //if there is a page id, find the farm, set the farm, and open the drawer
-    const { id, place, lat, long } = router.query;
-
-    const [drawerOpen, setDrawerOpen] = useState(false);
-    const [selectedFarm, setSelectedFarm] = useState(undefined);
-
-    useEffect(()=>{
-        if(!router.isReady) return;
-        if (id) {
-            const queryFarm = farmList.find(farm => farm.id == id)
-            if (queryFarm == undefined) return;
-            setSelectedFarm(queryFarm)
-            setDrawerOpen(true)
-        }
-
-    }, [router.isReady]);
+    const { place, lat, long } = router.query;
 
     var placeInit = ""
     var latLongInit = {lat: 0.0, long: 0.0}
@@ -41,27 +36,6 @@ function Farms(){
         placeInit = place
         latLongInit = {lat:  lat, long: long}
     }
-
-    //const farmI = farmList.find(farm => farm.id == id)
-
-    var farmInit = null
-    var drawerInit = false
-    // if (id) {
-    //     for (let farm of farmList){
-    //         if (farm.id == id){
-    //             setDrawerOpen(true)
-    //             setSelectedFarm(farm)
-    //             //farmInit = id
-    //             //drawerInit = true
-    //             break;
-    //         }
-    //     }
-    // }
-    /*window.onpopstate = () => {
-        if (drawerOpen == true) {
-            router.push("/farms");
-        }
-    }*/
 
     const [searchText, setSearchText] = useState("");
     const [location, setLocation] = useState(placeInit);
@@ -78,19 +52,7 @@ function Farms(){
 
     useEffect(() => {
         console.log("init use effect", currentLoc.current.lat, currentLoc.current.long)
-        if (id) {
-            console.log("here with id")
-            for (let farm of farmList){
-                if (farm.id == id){
-                    console.log("here with found")
-                    setDrawerOpen(true)
-                    setSelectedFarm(farm)
-                    //farmInit = id
-                    //drawerInit = true
-                    break;
-                }
-            }
-        }
+    
         if (currentLoc.current.lat == 0.0) {
             getLocationAndSort(farmList)
         }else{
@@ -179,10 +141,10 @@ function Farms(){
         //     </Drawer>
         <div style={styles.main}>
             <Head>
-                <title>{ drawerOpen ? selectedFarm.name :"Farms near " + place }</title>
+                <title>{ "Showing farms near " + place }</title>
                 <meta
                     name="description"
-                    content= {drawerOpen ? selectedFarm.description : "Tired of going to the North Carolina farmers market? Locally Grown is an easy way to find NC farms selling meat, produce, and dairy."}
+                    content= {"Search for North Carolina farms selling meat, produce, and dairy."}
                     key="desc"
                 />
             </Head>
@@ -198,7 +160,7 @@ function Farms(){
 
                 }}>{(location != "") ? ("Showing farms near " + location) : ""}</h1>
             <FarmCategories categories={selectedCategories} selectCategory={setSelectedCategories}/>
-            <Feed farms={sortedFarms} selectFarm={setSelectedFarm} toggleDrawer={setDrawerOpen}></Feed>
+            <Feed farms={sortedFarms}></Feed>
         </div>
     );
 }
