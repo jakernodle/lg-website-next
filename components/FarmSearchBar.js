@@ -1,10 +1,12 @@
 import SearchIcon from '../public/assets/search-icon.svg';
+import logo from '../public/assets/Locallygrowntextlabel.png';
 import Image from 'next/image'
 import { useState } from 'react';
-import { Popper, Button } from '@mui/material';
+import { Popper, Button, autocompleteClasses } from '@mui/material';
 import usePlacesService from "react-google-autocomplete/lib/usePlacesAutocompleteService";
 import { StyleRoot } from 'radium';
 import { useRouter } from 'next/router';
+import Link from 'next/link'
 
 function FarmSearchBar(props){
 
@@ -20,6 +22,8 @@ function FarmSearchBar(props){
             paddingBottom: '1px',
         },
         topBar: {
+            display: 'flex', 
+            flexDirection: 'row',
             marginRight: 'auto',
             marginLeft: 'auto',
             width: '60%',
@@ -29,6 +33,30 @@ function FarmSearchBar(props){
             '@media (max-width: 480px)': {
                 width: '90%',
             },
+        },
+        topBarSmall: {
+            display: 'flex', 
+            flexDirection: 'row',
+            marginLeft: 'auto',
+            marginRight: '40px',
+            width: '40%',
+            '@media (max-width: 720px)': {
+                width: '76%',
+                marginRight: 'auto',
+            },  
+            '@media (max-width: 480px)': {
+                width: '90%',
+                marginRight: 'auto',
+            },
+        },
+        imageDiv: {
+            position: 'absolute',
+            width: '400px',
+            height: '60%',
+            marginTop: '15px',
+            '@media (max-width: 720px)': {
+                width: '0px',
+            }, 
         },
         searchContainer: {
             borderRadius: 10,
@@ -89,7 +117,7 @@ function FarmSearchBar(props){
         rowContainer: {
             display: 'flex', 
             flexDirection: 'row',
-            width: '100%'
+            width: '100%',
         }
     };
 
@@ -164,7 +192,14 @@ function FarmSearchBar(props){
 
     return (
         <StyleRoot style={styles.main}>
-            <div style={styles.topBar}>
+            {(props.small == true &&
+            <Link href="/">
+                <div style={styles.imageDiv}>
+                    <Image src={logo} layout='fill' objectFit='contain' alt="local farms logo" />
+                </div>
+            </Link>
+            )}
+            <div style={props.small == true ? styles.topBarSmall : styles.topBar}>
                 <div style={styles.searchContainer}>
                     <div style={styles.searchInputIconContainer}>
                     <Image src={SearchIcon} width="18px" alt="search for farmers"/>

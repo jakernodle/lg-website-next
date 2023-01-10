@@ -59,7 +59,7 @@ function Farm({ farm }){
                 <meta name="ICBM" content={farm.coordinates.latitude + "," + farm.coordinates.longitude} />
             </Head>
             <div style={styles.search}>
-                <FarmSearchBar/>
+                <FarmSearchBar small={true}/>
             </div>
             <div style={styles.main}>
             <style global jsx>{`
