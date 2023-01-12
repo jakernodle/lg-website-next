@@ -27,6 +27,18 @@
 
    </url>
 
+   <url>
+
+      <loc>https://blog.locallygrown.app/</loc>
+
+      <lastmod>2022-12-17</lastmod>
+
+      <changefreq>weekly</changefreq>
+
+      <priority>0.8</priority>
+
+   </url>
+
    <!-- Search Location URL's -->
    <url>
 
