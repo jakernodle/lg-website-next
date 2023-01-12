@@ -7,101 +7,48 @@ import { useRouter } from 'next/router';
 import Head from 'next/head';
 
 // This gets called on every request
-/*export async function getServerSideProps() {
-    // Fetch data from external API
-    const res = await fetch(`https://.../data`)
-    const data = await res.json()
-  
-    // Pass data to the page via props
-    return { props: { data } }
-}*/
+export async function getServerSideProps({ query }) {
+    console.log("reloading")
+    //get location
+    const lat = query.lat
+    const long = query.long
+    var place = query.place
 
-function Farms(){
+    var location = {lat: 0.0, long: 0.0}
+    var farms = []
 
-    const styles = {
-        main: { width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', backgroundColor: 'rgba(0,0,0,0.05)'},
-        logo: {width: '56%',
-            margin: 20,
-            marginTop: 60},
-        headerText: { textAlign: 'center', color: "#000", width: '50%', marginTop: 20, marginBottom: 20, fontWeight: 400 },
-    };
+    if (lat || long) {
+        //set location
+        location = {lat:  lat, long: long}
+        console.log(location)
+        // "Fetch" data from external API and sort based on location
+        farms = farmList.sort( compareCoordinates )
+        farms = farms.slice(0, farmList.length > 25 ? 25 : farmList.length)
+        console.log(farms.length, "farm count")
+    }else {
 
-    const router = useRouter();
-
-    const { place, lat, long } = router.query;
-
-    var placeInit = ""
-    var latLongInit = {lat: 0.0, long: 0.0}
-    if (place) {
-        placeInit = place
-        latLongInit = {lat:  lat, long: long}
-    }
-
-    const [searchText, setSearchText] = useState("");
-    const [location, setLocation] = useState(placeInit);
-    const [sortedFarms, setSortedFarms] = useState([]);
-    const [selectedCategories, setSelectedCategories] = useState([]);
-    var currentLoc = useRef(latLongInit);
-
-
-    function setLatAndLong(lat,long){
-        currentLoc.current = {lat:lat, long:long}
-        const filtered = filterListForCetegories(farmList, selectedCategories)
-        setSortedFarms(filtered.sort( compareCoordinates ));
-    }
-
-    useEffect(() => {
-        console.log("init use effect", currentLoc.current.lat, currentLoc.current.long)
-    
-        if (currentLoc.current.lat == 0.0) {
-            getLocationAndSort(farmList)
-        }else{
-            setSortedFarms(farmList.sort( compareCoordinates ))
-        }
-    }, []);
-
-    const firstUpdate = useRef(true);
-    useLayoutEffect(() => {
-        if (firstUpdate.current) {
-            firstUpdate.current = false;
-            return;
-        }
-
-        console.log("category use effect", currentLoc.current.lat, currentLoc.current.long)
-        const filtered = filterListForCetegories(farmList, selectedCategories)
-        setSortedFarms(filtered.sort( compareCoordinates ))
-    }, [selectedCategories]);
-
-    function filterListForCetegories(list, categories) {
-        console.log(categories)
-        if (categories.length == 0) { return list; }
-        var filteredList = [];
-        for (let listIndex=0; listIndex < list.length; listIndex++) {
-            for (let categoryIndex=0; categoryIndex < categories.length; categoryIndex++){
-                if (list[listIndex].categories.indexOf(categories[categoryIndex]) !== -1) {
-                    filteredList.push(list[listIndex])
-                    break;
-                }
-            }
-        }
-        return filteredList
-    }
-    
-    function getLocationAndSort(farms) {
+        //get location
         var url = "https://www.ipinfo.io?token=379cb78ca0536e"
-
-        fetch(url).then(function(response) {
+        var data = await fetch(url).then(function(response) {
             return response.json();
         }).then(function(data) {
-            console.log(data)
-            setLocation(data.city)
-            const lat = parseFloat(data.loc.substr(0, data.loc.indexOf(',')));
-            const long = parseFloat(data.loc.substr(data.loc.indexOf(',')+1));
-            currentLoc.current = {lat:lat, long:long}
-            setSortedFarms(farms.sort( compareCoordinates ))
+            return data
         }).catch(function(err) {
             console.log('Fetch Error :-S', err);
         });
+
+        const iplat = parseFloat(data.loc.substr(0, data.loc.indexOf(',')));
+        const iplong = parseFloat(data.loc.substr(data.loc.indexOf(',')+1));
+        location = {lat:iplat, long:iplong}
+        console.log(location)
+            
+        //sort
+        console.log(farmList.length, "farms list count")
+        farms = farmList.sort( compareCoordinates )
+        farms = farms.slice(0, farmList.length > 25 ? 25 : farmList.length)
+        place = data.city
+        console.log(place)
+        console.log(farms.length, "farm count")
     }
 
     function compareCoordinates( a, b ) {
@@ -118,30 +65,75 @@ function Farms(){
     }
 
     function distance(lat, long){
-        const absLatDist = Math.abs(currentLoc.current.lat-lat)
-        const absLongDist = Math.abs(currentLoc.current.long-long)
+        const absLatDist = Math.abs(location.lat-lat)
+        const absLongDist = Math.abs(location.long-long)
         return Math.sqrt(Math.pow(absLatDist, 2) + Math.pow(absLongDist, 2))
+    }
+  
+    // Pass data to the page via props
+    return { props: { farms, place } }
+}
+
+function Farms({farms, place}){
+
+    const styles = {
+        main: { width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', backgroundColor: 'rgba(0,0,0,0.05)'},
+        logo: {width: '56%',
+            margin: 20,
+            marginTop: 60},
+        headerText: { textAlign: 'center', color: "#000", width: '50%', marginTop: 20, marginBottom: 20, fontWeight: 400 },
+    };
+
+    const router = useRouter();
+    const [searchText, setSearchText] = useState("");
+    const [location, setLocation] = useState(place);
+    const [filteredFarms, setFilteredFarms] = useState(farms)
+    const [selectedCategories, setSelectedCategories] = useState([]);
+
+    function setLatAndLong(lat,long){
+        //currentLoc.current = {lat:lat, long:long}
+        //const filtered = filterListForCetegories(farmList, selectedCategories)
+        //setSortedFarms(filtered.sort( compareCoordinates ));
+        //push url
+    }
+
+    useEffect(() => {
+        console.log("new farms")
+        setFilteredFarms(farms)
+        setLocation(place)
+    }, [farms])
+
+    const firstUpdate = useRef(true);
+    useLayoutEffect(() => {
+        if (firstUpdate.current) {
+            firstUpdate.current = false;
+            return;
+        }
+
+        const filtered = filterListForCetegories(farms, selectedCategories)
+        setFilteredFarms(filtered)
+    }, [selectedCategories]);
+
+    function filterListForCetegories(list, categories) {
+        console.log(categories)
+        if (categories.length == 0) { return list; }
+        var filteredList = [];
+        for (let listIndex=0; listIndex < list.length; listIndex++) {
+            for (let categoryIndex=0; categoryIndex < categories.length; categoryIndex++){
+                if (list[listIndex].categories.indexOf(categories[categoryIndex]) !== -1) {
+                    filteredList.push(list[listIndex])
+                    break;
+                }
+            }
+        }
+        return filteredList
     }
 
     return (
-        //<img src={logo} style={styles.logo} alt="logo" />
-        //<Typography variant="h3" style={styles.headerText}>Search North Carolina farms selling meat, produce, and dairy.</Typography>
-        // <Drawer
-        //         anchor='right'
-        //         open={drawerOpen}
-        //         onClose={() => {
-        //             router.push({
-        //                 pathname:'/farms'}, undefined, { shallow: true })
-        //             setDrawerOpen(false)
-        //         }}
-        //     >
-        //         {drawerOpen == true && 
-        //         (<FarmDetail selectedFarm={selectedFarm}/>)
-        //         }
-        //     </Drawer>
+
         <div style={styles.main}>
             <Head>
-                <title>{ "Showing farms near " + place }</title>
+                <title>{ "Showing farms near " + location }</title>
                 <meta
                     name="description"
                     content= {"Search for North Carolina farms selling meat, produce, and dairy."}
@@ -160,7 +152,7 @@ function Farms(){
 
                 }}>{(location != "") ? ("Showing farms near " + location) : ""}</h1>
             <FarmCategories categories={selectedCategories} selectCategory={setSelectedCategories}/>
-            <Feed farms={sortedFarms}></Feed>
+            <Feed farms={filteredFarms}></Feed>
         </div>
     );
 }

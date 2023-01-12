@@ -1,4 +1,625 @@
-var farmList = [    {
+const farmList = [    
+    {
+        id: "roberts-big-oak-farm-midland-north-carolina",
+        name: "Roberts' Big Oak Farm",
+        website: "http://www.robertsbigoakfarm.com",
+        location: "Midland, North Carolina",
+        address: "1551 Cal Bost Rd",
+        description:"Roberts' Big Oak Farm is a 4th generation family farm where we raise Black Angus beef cows.  Our cows are raised as nature intended on our family's 200+ acre farm in Cabarrus County, North Carolina.",
+        pictureURL: "https://lh-images.us-east-1.linodeobjects.com//f4a8cc2f-47c0-459c-9d9f-2da70482e2ad.jpg",
+        primaryFarmerInfo: {
+            name: "Charles Roberts",
+            contact: "(704) 788-9045",
+            pictureURL: "https://lh-images.us-east-1.linodeobjects.com//5402.jpg"
+        },
+        allProducts: ["pastured-eggs", "beef"],
+        categories: ["Meats/Livestock", "Dairy/Eggs"],
+        coordinates: {
+            longitude: "-80.5474",
+            latitude: "35.2874"
+        }
+    },
+    {
+        id: "green-leaf-farms-concord-north-carolina",
+        name: "Green Leaf Farms",
+        website: "http://www.greenleaffarmsnc.com",
+        location: "Concord, North Carolina",
+        address: "1639 Saint Johns Church Rd",
+        description:"",
+        pictureURL: "https://lh-images.us-east-1.linodeobjects.com//3abf59c1-f5ce-4137-890c-b9dca36915ad.jpg",
+        primaryFarmerInfo: {
+            name: "Danny Safrit",
+            contact: "(828) 243-2958",
+            pictureURL: ""
+        },
+        allProducts: ["beef", "pastured-eggs"],
+        categories: ["Processed", "Meats/Livestock", "Dairy/Eggs"],
+        coordinates: {
+            longitude: "-80.4885",
+            latitude: "35.4397"
+        }
+    },
+    {
+        id: "bushnvine-farm-york-south-carolina",
+        name: "Bush-N-Vine Farm",
+        website: "http://www.bushnvinefarm.com/",
+        location: "York, South Carolina",
+        address: "1650 Filbert Hwy",
+        description:"We have been growing fresh fruits and vegetables here at the Bush-N-Vine since 1979. However, the Bush-N-Vine Farm has actually been in the Hall family for much longer---over 150 years! Originally the farm was solely a peach orchard. The building located on our farm in York, South Carolina was used as a peach packing shed in the 1950's and 60's. In 1979, Bob Hall reopened the doors using the space as an open air market. After graduating from Clemson University in 1980 Bob made farming his career. He has been selling delicious produce in the stand ever since. His hard work and dedication to farming are the reason Bush-N-Vine Farm is what it is today! In 2010, after graduating from Clemson University, Sam Hall joined forces with his dad and started working at the farm full-time. We hope that our family farm will continue providing our customers with the fresh produce they love for many years to come!      ",
+        pictureURL: "https://lh-images.us-east-1.linodeobjects.com//626e2228-33bd-426a-ae4b-b794fd972941.jpg",
+        primaryFarmerInfo: {
+            name: "Sam Hall",
+            contact: "(803) 684-2732",
+            pictureURL: "https://lh-images.us-east-1.linodeobjects.com//6be5d99b-4712-435e-a96e-49bfce14ef70.jpg"
+        },
+        allProducts: ["blackberries", "apples", "brussels-sprouts", "cucumber", "chard", "strawberries", "preserves", "asparagus", "lettuce", "organic-flowers", "butter", "hot-peppers", "pastured-eggs", "organic-pork", "cantaloupes", "kohlrabi", "limes", "nectarines", "cider", "collards", "blueberries", "celery", "zucchini", "pickles", "mustard-greens", "beans", "organic-honey", "spinach", "chinese-greens", "eggplant", "winter-squash", "gourds", "raw-milk", "arugula", "peaches", "pumpkins", "potatoes", "raspberries", "melons", "soap", "peas", "cabbage", "beef", "summer-squash", "kale", "pecans", "cheese", "asian-pears", "rhubarb", "turnips", "radishes", "beets", "figs", "cauliflower", "green-beans", "buttermilk", "plums", "lemons", "sweet-peppers", "okra", "watermelons", "sweet-corn", "sweet-potato", "green-onions", "tomatoes", "broccoli"],
+        categories: ["Flowers", "Dairy/Eggs", "Processed", "Fruits", "Nuts/Seeds", "Vegetables", "Meats/Livestock", "Specialty Items", "Herbs"],
+        coordinates: {
+            longitude: "-81.2543",
+            latitude: "35.034"
+        }
+    },
+    {
+        id: "brown-farm-mount-ulla-north-carolina",
+        name: "Brown Farm",
+        website: "http://www.brownfarmbeef.com",
+        location: "Mount Ulla, North Carolina",
+        address: "",
+        description:"Brown Farm Beef - We are a registered NC Century Farm that has been in our family since 1835.  We are located in Rowan County in the beautiful farming community of Mt. Ulla.  We only sell Beef that is born and raised on our farm.  We DO NOT use growth implants.  Our Beef is Grain Finished and still has the health benefits of Omega 3's like strictly grass fed beef does, but with added flavor and tenderness. Primarily we sell beef halves and quarters that are custom cut to your specifications, placed into vacuumed sealed packages, frozen rock hard and delivered to you.  You can have a year supply of beef with one order!  Email or call (704-746-4919) with any questions and ordering information.  We look forward to serving you!  Orders are now being taken for our next deliveries in 2021 and 2022.      ",
+        pictureURL: "https://lh-images.us-east-1.linodeobjects.com//fb85202a-5399-4063-a388-fc66d13ba7e8.jpg",
+        primaryFarmerInfo: {
+            name: "James W. Brown III",
+            contact: "(704) 746-4919",
+            pictureURL: "https://lh-images.us-east-1.linodeobjects.com//5fc84cb7-e809-4c53-83dc-0acdea201829.jpg"
+        },
+        allProducts: ["beef"],
+        categories: ["Meats/Livestock"],
+        coordinates: {
+            longitude: "-80.69",
+            latitude: "35.6606"
+        }
+    },
+    {
+        id: "r-and-b-farms-taylorsville-north-carolina",
+        name: "R and B Farms",
+        website: "http://www.randbfarmsnc.com",
+        location: "Taylorsville, North Carolina",
+        address: "5947 NC Hwy 16 South",
+        description:"R and B Farms is a small farm in Taylorsville, NC, and is dedicated to raising quality grass-fed beef. We use regenerative grazing practices with our cows, moving them to fresh grass daily. When our forage supply is running low, such as in winter, we feed locally sourced grass hay. We never use pesticides, herbicides, or other chemicals on our fields. We also do not use growth implants or chemicals on our cows. Our cows live their entire lives on pasture. We believe in letting cows be cows! We strive to raise beef that is good for the environment and good for people.      ",
+        pictureURL: "https://lh-images.us-east-1.linodeobjects.com//d51d6150-153e-4ba0-9ad8-3c1e3c6c74fb.jpg",
+        primaryFarmerInfo: {
+            name: "Stewart Akers",
+            contact: "(828) 234-1229",
+            pictureURL: ""
+        },
+        allProducts: ["beef"],
+        categories: ["Meats/Livestock"],
+        coordinates: {
+            longitude: "-81.1839",
+            latitude: "35.8419"
+        }
+    },
+    {
+        id: "highlands-family-farm-connelly-springs-north-carolina",
+        name: "Highlands Family Farm",
+        website: "http://Highlandsfamilyfarm.com",
+        location: "Connelly Springs, North Carolina",
+        address: "2199 Wade drive ext",
+        description:"",
+        pictureURL: "https://lh-images.us-east-1.linodeobjects.com//e4d5c541-0e6c-40da-ab15-e8c4d8e746e3.jpg",
+        primaryFarmerInfo: {
+            name: "Daniel Wall",
+            contact: "(828) 302-3326",
+            pictureURL: "https://lh-images.us-east-1.linodeobjects.com//854c67dc-9036-441c-8670-cca66151ee20.jpg"
+        },
+        allProducts: ["beef", "organic-turkey", "organic-chicken", "organic-lamb", "organic-pork"],
+        categories: ["Meats/Livestock"],
+        coordinates: {
+            longitude: "-81.4626",
+            latitude: "35.7485"
+        }
+    },
+    {
+        id: "walnut-hollow-farms-dallas-north-carolina",
+        name: "Walnut Hollow Farms",
+        website: "http://WalnutHollowFarms.com",
+        location: "Dallas, North Carolina",
+        address: "1121 Philadelphia Church Rd",
+        description:"Walnut Hollow Farms is a group of five farms in northern Gaston county, NC, owned and overseen by our family.  All five farms were owned by our ancestors.  When Nicholas Friday first moved here, to start his family, from York, PA, in the 1750s Gaston county hadn't yet been established (est. 1846) .  His land is what we call Home and is still farmed by us today.",
+        pictureURL: "https://lh-images.us-east-1.linodeobjects.com//2175.jpg",
+        primaryFarmerInfo: {
+            name: "Linda Friday",
+            contact: "",
+            pictureURL: ""
+        },
+        allProducts: ["hot-peppers", "mushrooms", "radishes", "salad-greens", "cantaloupes", "zucchini", "summer-squash", "mustard-greens", "sunflower-seeds", "figs", "lettuce", "watermelons", "soap", "sweet-peppers", "broccoli", "cucumber", "green-beans", "chestnuts", "organic-pork", "gourds", "garlic", "sweet-corn", "tomatoes", "sweet-potato", "daikon", "turnips", "potatoes", "okra", "pecans", "cabbage", "beef", "melons"],
+        categories: ["Fruits", "Vegetables", "Specialty Items", "Nuts/Seeds", "Herbs", "Processed", "Meats/Livestock"],
+        coordinates: {
+            longitude: "-81.1744",
+            latitude: "35.3304"
+        }
+    },
+    {
+        id: "cross-creek-angus-beef-new-london-north-carolina",
+        name: "Cross creek Angus beef",
+        website: "",
+        location: "New London, North Carolina",
+        address: "28628 Austin Rd.",
+        description:"10th generation Angus farmers  working to supply USDA certified quality beef that's not packed with steroids and hormones. Our steers are born here, grazed here. Grass fed and grain finished.  As close to organic beef as you really do want. We also offer locally harvested fescue hay in 48,60 and 72 inch round bales.      ",
+        pictureURL: "https://lh-images.us-east-1.linodeobjects.com//649b993f-184d-496a-ac8d-977aa2525905.jpg",
+        primaryFarmerInfo: {
+            name: "Brandy Frick",
+            contact: "(980) 229-5988",
+            pictureURL: ""
+        },
+        allProducts: ["beef"],
+        categories: ["Meats/Livestock", "Specialty Items"],
+        coordinates: {
+            longitude: "-80.2596",
+            latitude: "35.3922"
+        }
+    },
+    {
+        id: "the-farmers-daughter-taylorsville-north-carolina",
+        name: "The Farmers' Daughter",
+        website: "http://www.thefarmersdaughternc.com",
+        location: "Taylorsville, North Carolina",
+        address: "2150 Friendship Church Road",
+        description:"The Farmers' Daughter is a first generation strawberry and mixed vegetable farm, owned and operated by Jason and Amy Douglas, in Taylorsville, NC. ",
+        pictureURL: "https://lh-images.us-east-1.linodeobjects.com//7e20eae0-03ba-47f2-bf53-18fec6ab7aed.jpg",
+        primaryFarmerInfo: {
+            name: "Amy Douglas",
+            contact: "(828) 312-8137",
+            pictureURL: "https://lh-images.us-east-1.linodeobjects.com//f46e98be-43ae-44f8-adaf-26b21da93469.jpg"
+        },
+        allProducts: ["lettuce", "cantaloupes", "collards", "barley", "watermelons", "salad-mix", "cucumber", "blackberries", "winter-squash", "pastured-eggs", "potatoes", "pears", "soybeans", "cauliflower", "kale", "sweet-corn", "chard", "cabbage", "green-beans", "strawberries", "asian-pears", "carrots", "corn", "blueberries", "nectarines", "kohlrabi", "radishes", "onions", "hot-peppers", "okra", "apples", "eggplant", "zucchini", "baked-goods", "peas", "grapes", "turnips", "mustard-greens", "tomatoes", "summer-squash", "broccoli", "sweet-potato", "beef", "beets", "melons", "peaches", "sweet-peppers", "pumpkins", "green-onions", "preserves", "spinach"],
+        categories: ["Grains", "Specialty Items", "Dairy/Eggs", "Herbs", "Vegetables", "Fruits", "Meats/Livestock", "Processed"],
+        coordinates: {
+            longitude: "-81.2212",
+            latitude: "35.8478"
+        }
+    },
+    {
+        id: "beltie-beef-company-casar-north-carolina",
+        name: "Beltie Beef Company",
+        website: "http://beltiebeefco.com",
+        location: "Casar, North Carolina",
+        address: "301 Corinth Church Cir.",
+        description:"100% Grass Fed Beef from Heritage Breed Belted Galloways..",
+        pictureURL: "https://lh-images.us-east-1.linodeobjects.com//8473acf2-6f1f-4eee-8322-6e6a5842d504.jpg",
+        primaryFarmerInfo: {
+            name: "Alendro Alhambra",
+            contact: "(704) 297-5284",
+            pictureURL: ""
+        },
+        allProducts: ["beef"],
+        categories: ["Meats/Livestock"],
+        coordinates: {
+            longitude: "-81.6302",
+            latitude: "35.5279"
+        }
+    },
+    {
+        id: "uwharrie-farm-asheboro-north-carolina",
+        name: "Uwharrie Farm",
+        website: "http://uwharriefarm.typepad.com/",
+        location: "Asheboro, North Carolina",
+        address: "4658 Waynick Meadow Rd.",
+        description:"Uwharrie Farm is a two generation family farm nestled in the rolling hills of the Piedmont Region of North Carolina.  The Uwharrie Mountains overlook the rolling  pastures on our 120 acre farm.  Committed to an environmentally friendly agriculture and safe food supply our family produces grass fed beef, and pork raised outside free to root and browse with the addition of organic feed.  We have chosen to raise Jersey and Jersey cross cattle because -",
+        pictureURL: "https://lh-images.us-east-1.linodeobjects.com//f3c5fcef-8572-4867-bf72-9492b6470b12.jpg",
+        primaryFarmerInfo: {
+            name: "Judy McPherson",
+            contact: "(336) 857-2775",
+            pictureURL: ""
+        },
+        allProducts: ["beef", "organic-pork"],
+        categories: ["Meats/Livestock"],
+        coordinates: {
+            longitude: "-79.9702",
+            latitude: "35.6238"
+        }
+    },
+    {
+        id: "milk-and-honey-farm-yadkinville-north-carolina",
+        name: "Milk and Honey Farm",
+        website: "http://themilkandhoneyfarm.blogspot.com",
+        location: "Yadkinville, North Carolina",
+        address: "",
+        description:"We're a small family farm trying to pursue thorough independence from the mass produced food system.  We mainly sell vegetables, but we also sell some fruits, cut flowers, specialty crops like peanuts, eggs, shitake mushrooms, an occasional beef... We grow almost everything we as a family eat, and we try to offer as many of those food groups as we can to our CSA members.  We're inclined to low-tech, homegrown ways of farming, so, for example, we save a majority of the seeds we plant and avoid a lot of plastics (like for mulch, coverings, etc.)  We don't ever use any synthetic fertilizers, herbicides, or other pesticides.  We raise our animals with exceptional access to natural forages and without any pharmaceuticals, artificial stimulants, or genetically modified feeds.  Our desire is to provide affordable, homegrown food for your everyday table.      ",
+        pictureURL: "https://lh-images.us-east-1.linodeobjects.com//1df80315-6783-4e3d-b6bd-db7adee62148.jpg",
+        primaryFarmerInfo: {
+            name: "Eric and Melissa Brown",
+            contact: "(704) 546-5074",
+            pictureURL: "https://lh-images.us-east-1.linodeobjects.com//60145ba7-e6b1-4ba1-a1b2-f3359e48e8cd.jpg"
+        },
+        allProducts: ["persimmons", "green-onions", "chinese-greens", "strawberries", "cabbage", "eggplant", "mustard-greens", "zucchini", "okra", "watermelons", "spinach", "hot-peppers", "tomatoes", "pears", "peas", "chestnuts", "sunchokes", "sweet-potato", "potatoes", "blackberries", "sweet-peppers", "radishes", "kale", "arugula", "lettuce", "organic-flowers", "garlic", "rhubarb", "melons", "daikon", "peanuts", "grapes", "leeks", "beef", "chard", "pastured-eggs", "summer-squash", "cantaloupes", "cucumber", "organic-edamame", "green-beans", "salad-greens", "turnips", "carrots", "beans", "figs", "winter-squash", "asian-pears", "mushrooms", "beets", "blueberries", "onions", "collards", "salad-mix", "pumpkins", "asparagus"],
+        categories: ["Vegetables", "Herbs", "Dairy/Eggs", "Flowers", "Fruits", "Nuts/Seeds", "Meats/Livestock", "Processed"],
+        coordinates: {
+            longitude: "-80.7068",
+            latitude: "36.0372"
+        }
+    },
+    {
+        id: "all-natural-farms-llc-charlotte-north-carolina",
+        name: "All Natural Farms LLC",
+        website: "http://www.allnaturalfarms.org",
+        location: "Charlotte, North Carolina",
+        address: "1801 Yorkmont Rd",
+        description:"We live in Cornelius and have a farm in Rutherfordton where we raise all of our own meat. Grass fed / grass finished Beef, Pasture Raised pork, grass fed lamb, and free range chickens. We do very limited production just for our family and sell the excess to the public.",
+        pictureURL: "https://lh-images.us-east-1.linodeobjects.com//777e50af-e28c-4350-8e74-a38ce4fe2e4b.jpg",
+        primaryFarmerInfo: {
+            name: "Lee VanTine",
+            contact: "(843) 991-5066",
+            pictureURL: "https://lh-images.us-east-1.linodeobjects.com//c2ce170a-971a-46d0-9382-0ecf304d30a0.jpg"
+        },
+        allProducts: ["organic-pork", "beef", "organic-lamb", "blueberries", "blackberries"],
+        categories: ["Fruits", "Meats/Livestock"],
+        coordinates: {
+            longitude: "-80.9087",
+            latitude: "35.1867"
+        }
+    },
+    {
+        id: "flynns-farm-concord-north-carolina",
+        name: "Flynns farm",
+        website: "http://www.theflynnsfarm.com",
+        location: "Concord, North Carolina",
+        address: "5980 Zion Church Rd",
+        description:"At Flynns Farm, it's our mission to bring you the best tasting and the best quality products made locally in Concord NC. We make pork and chicken bratwurst, we have pork meat, goat meat, we have goat milk soap, vegetables, eggs and more.      ",
+        pictureURL: "https://lh-images.us-east-1.linodeobjects.com//17bd0fb3-e764-4696-8a21-1a2821cf7c2e.jpg",
+        primaryFarmerInfo: {
+            name: "Carlos Flynn",
+            contact: "(980) 354-4090",
+            pictureURL: "https://lh-images.us-east-1.linodeobjects.com//c8672a9a-19cb-4974-8c52-2d712bb9a71c.jpg"
+        },
+        allProducts: ["organic-goat", "okra", "pastured-eggs", "brussels-sprouts", "lettuce", "sweet-peppers", "zucchini", "cucumber", "kale", "radishes", "organic-chicken", "collards", "preserves", "beef", "rutabagas", "tomatoes", "eggplant", "broccoli", "organic-pork", "soap", "cabbage"],
+        categories: ["Vegetables", "Dairy/Eggs", "Meats/Livestock", "Herbs", "Processed"],
+        coordinates: {
+            longitude: "-80.5755",
+            latitude: "35.3343"
+        }
+    },
+    {
+        id: "poultry-junction-farms-stanley-north-carolina",
+        name: "Poultry Junction Farms",
+        website: "http://www.poultryjunctionfarms.com",
+        location: "Stanley, North Carolina",
+        address: "129 South Main Street",
+        description:"We offer pasture raised poultry, grass fed beef, pasture raised pork, locally grown produce, jams & jellies, sauces & rubs.      ",
+        pictureURL: "https://lh-images.us-east-1.linodeobjects.com//45336.jpg",
+        primaryFarmerInfo: {
+            name: "Michael Moore",
+            contact: "(704) 648-5011",
+            pictureURL: ""
+        },
+        allProducts: ["apples", "cantaloupes", "turnips", "hot-peppers", "green-beans", "sweet-peppers", "summer-squash", "sweet-potato", "cucumber", "daikon", "garlic", "peas", "beef", "carrots", "cauliflower", "lettuce", "watermelons", "brussels-sprouts", "potatoes", "tomatoes", "broccoli", "organic-edamame", "blackberries", "organic-honey", "green-onions", "collards", "okra", "pumpkins", "onions", "pears", "kale", "mustard-greens", "organic-pork", "beets", "organic-turkey", "winter-squash", "organic-chicken", "radishes", "zucchini", "cheese", "pastured-eggs", "cabbage", "blueberries"],
+        categories: ["Meats/Livestock", "Fruits", "Dairy/Eggs", "Vegetables", "Processed"],
+        coordinates: {
+            longitude: "-81.0952",
+            latitude: "35.3591"
+        }
+    },
+    {
+        id: "baucoms-best-100%-grass-fed-beef-monroe-north-carolina",
+        name: "Baucom's Best 100% Grass Fed Beef",
+        website: "http://www.baucomsbest.com",
+        location: "Monroe, North Carolina",
+        address: "1002 Baucom Road",
+        description:"Baucom's Best 100% Grassfed Beef is raised exclusively on the Baucom Family Farm located just outside the Charlotte Metropolitan area in rural Union County N.C.  Since we are responsible for the care of our cattle their entire lives, we can guarantee that our Black Angus cattle are fed no grain or animal by-products and are raised in a healthy and humane environment.  Our pastures are never sprayed with pesticides or chemical fertilizers. ",
+        pictureURL: "https://lh-images.us-east-1.linodeobjects.com//28279.jpg",
+        primaryFarmerInfo: {
+            name: "Milton and Harriett Baucom",
+            contact: "(704) 254-0742",
+            pictureURL: ""
+        },
+        allProducts: ["beef", "organic-chicken", "pastured-eggs", "organic-turkey"],
+        categories: ["Meats/Livestock", "Dairy/Eggs"],
+        coordinates: {
+            longitude: "-80.5121",
+            latitude: "35.0478"
+        }
+    },
+    {
+        id: "big-oak-farm-denver-north-carolina",
+        name: "Big Oak Farm",
+        website: "http://www.bigoakfarmnc.com",
+        location: "Denver, North Carolina",
+        address: "2749 Sherrill Cove Way",
+        description:"Our family farm has been involved in agriculture in Cabarrus Co for over 150 years.  We are true producers of high quality all natural beef.  You can find us at Davidson, Denver, and Conover farmers markets, Know Your Farms LLC, and Revolution Pizza in Charlotte.  We also sell our beef products from our home.  Please call ahead before coming out.  We welcome you to schedule a visit to our farm and you may be inclined to pick one out for yourself and save your family some money.",
+        pictureURL: "https://lh-images.us-east-1.linodeobjects.com//9269.jpg",
+        primaryFarmerInfo: {
+            name: "Mike and Dawn Smith",
+            contact: "(704) 785-0038",
+            pictureURL: ""
+        },
+        allProducts: ["beef"],
+        categories: ["Meats/Livestock"],
+        coordinates: {
+            longitude: "-80.9639",
+            latitude: "35.4816"
+        }
+    },
+    {
+        id: "gilcrest-natural-farm-iron-station-north-carolina",
+        name: "Gilcrest Natural Farm",
+        website: "http://gilcrestnc.com",
+        location: "Iron Station, North Carolina",
+        address: "1229 Lowes Lane",
+        description:"***Please see our updated Coronavirus pick up options below***",
+        pictureURL: "https://lh-images.us-east-1.linodeobjects.com//692d74d0-62f0-4224-98f1-43b2cdbabae7.jpg",
+        primaryFarmerInfo: {
+            name: "Gil and Amy Foster",
+            contact: "(704) 308-1431",
+            pictureURL: "https://lh-images.us-east-1.linodeobjects.com//acf81b85-0fef-4889-a427-a9abb0b417a2.jpg"
+        },
+        allProducts: ["organic-chicken", "pastured-eggs", "beef"],
+        categories: ["Meats/Livestock", "Dairy/Eggs"],
+        coordinates: {
+            longitude: "-81.0651",
+            latitude: "35.4353"
+        }
+    },
+    {
+        id: "natural-spring-farms-llc-concord-north-carolina",
+        name: "Natural Spring Farms, LLC",
+        website: "http://www.NaturalSpringFarms.com",
+        location: "Concord, North Carolina",
+        address: "7231 Timothy Drive",
+        description:"Natural Spring Farms is a family owned farm located near the historic Reed Gold Mine in Cabarrus County, NC.  We operate as a small farm by design which means that our goal is to produce high quality products in a way which is environmentally sustainable as well as humane to our livestock.  We believe that as the farm grows larger it becomes impractical to operate in the manner we desire.",
+        pictureURL: "https://lh-images.us-east-1.linodeobjects.com//42608.jpg",
+        primaryFarmerInfo: {
+            name: "Carolyn Davis",
+            contact: "(704) 796-4168",
+            pictureURL: ""
+        },
+        allProducts: ["pastured-eggs", "beef", "organic-goat", "organic-pork"],
+        categories: ["Meats/Livestock", "Dairy/Eggs"],
+        coordinates: {
+            longitude: "-80.4517",
+            latitude: "35.3345"
+        }
+    },
+    {
+        id: "creekside-farms-concord-north-carolina",
+        name: "Creekside Farms",
+        website: "http://www.creeksidefarms-nc.com",
+        location: "Concord, North Carolina",
+        address: "7611 Mt. Olive Rd",
+        description:"Creekside Farms is a small family operated farm located just North of Mt. Pleasant, NC.  Our farm was started for the simple reason to provide much of our own food and raise our children around a farming environment so they would grow up with a strong understand of where food comes from.  We offer naturally raised, antibiotic free beef, pork, chicken and eggs.    Our goals are simple: to raise animals the way nature intended and to provide our customers will a superior product both in taste and nutrition.",
+        pictureURL: "https://lh-images.us-east-1.linodeobjects.com//9410.jpg",
+        primaryFarmerInfo: {
+            name: "Chad VonCannon",
+            contact: "",
+            pictureURL: ""
+        },
+        allProducts: ["organic-pork", "organic-chicken", "beef", "pastured-eggs"],
+        categories: ["Meats/Livestock", "Dairy/Eggs"],
+        coordinates: {
+            longitude: "-80.4503",
+            latitude: "35.4393"
+        }
+    },
+    {
+        id: "stony-run-highlands-and-farm-oakboro-north-carolina",
+        name: "Stony Run Highlands and Farm",
+        website: "http://Stonyrunhighlandsandfarm.com",
+        location: "Oakboro, North Carolina",
+        address: "20221 ridgecrest rd.",
+        description:"Stony Run Highlands and Farm is a family farm located in the small town of Oakboro, North Carolina. Stony Run was established in 2016. The farm is owned and operated by Amber and Andrew Gloege, along with their family, and specializes in the heritage breed Scottish Highlands and their beef as well as all natural farming.  They chose Highland beef due to its nutritional value in comparison to other beef available. Stony Run occasionally offers livestock for sale including Scottish Highlands, ducks, and chickens. Be sure to stay on the look out for animals as they come available.      ",
+        pictureURL: "https://lh-images.us-east-1.linodeobjects.com//f8d3c4c5-e15b-4a3f-bbfa-949ea005f162.jpg",
+        primaryFarmerInfo: {
+            name: "Amber Gloege",
+            contact: "(704) 219-6720",
+            pictureURL: ""
+        },
+        allProducts: ["beef"],
+        categories: ["Meats/Livestock"],
+        coordinates: {
+            longitude: "-80.3453",
+            latitude: "35.2839"
+        }
+    },
+    {
+        id: "four-acres-farm-concord-north-carolina",
+        name: "Four Acres Farm",
+        website: "",
+        location: "Concord, North Carolina",
+        address: "",
+        description:"We are a family farm interested in helping children and families develop a better understand of where their food comes from.  Providing quality, locally grown food is very important to us.  We want to meet and get to know us.  Your comfort with our farming practices is important to ensure your confidence in our quality food.  All of our animals are humanely cared for.  All of them are on grass or pasture.  All of our meat is hormone and antibiotic free.  We absolutely guarantee the quality of our product.  We hope you&#39;ll try our products and tell your friends and neighbors about our wholesome meats and eggs.  We are happy to provide them for you.      ",
+        pictureURL: "https://lh-images.us-east-1.linodeobjects.com//17402.jpg",
+        primaryFarmerInfo: {
+            name: "Marvin and Debbie Bost",
+            contact: "(704) 788-4396",
+            pictureURL: ""
+        },
+        allProducts: ["organic-turkey", "organic-lamb", "organic-pork", "pastured-eggs", "beef", "organic-goat", "organic-chicken"],
+        categories: ["Meats/Livestock", "Dairy/Eggs", "Specialty Items"],
+        coordinates: {
+            longitude: "-80.4534",
+            latitude: "35.4753"
+        }
+    },
+    {
+        id: "poplin-farms-inc-albemarle-north-carolina",
+        name: "Poplin Farms, Inc.",
+        website: "http://poplinfarms.com",
+        location: "Albemarle, North Carolina",
+        address: "16647 NC 73 HWY",
+        description:"3rd Generation Family Operated Farm.  We offer all natural grass-fed beef  from our closed Angus based herd, culinary and medicinal herbs. Located 40 minutes from Charlotte, NC.  We welcome your calls and/or emails for pricing, delivery/pick-up options, and other information.   We also grow and sell horse quality alfalfa and orchard grass hay.      ",
+        pictureURL: "https://lh-images.us-east-1.linodeobjects.com//13679.jpg",
+        primaryFarmerInfo: {
+            name: "Shane Poplin",
+            contact: "(704) 699-2208",
+            pictureURL: ""
+        },
+        allProducts: ["mustard-greens", "lettuce", "green-onions", "leeks", "broccoli", "eggplant", "organic-edamame", "okra", "watermelons", "chard", "arugula", "garlic", "hot-peppers", "chinese-greens", "beef", "salad-mix", "spinach", "tomatoes", "onions", "sweet-corn", "radishes", "green-beans", "cabbage", "turnips", "cauliflower", "pastured-eggs", "beets", "beans", "collards", "sweet-potato", "potatoes", "brussels-sprouts", "salad-greens", "kale", "cucumber", "carrots", "kohlrabi", "zucchini", "blackberries", "summer-squash", "sweet-peppers"],
+        categories: ["Fruits", "Specialty Items", "Meats/Livestock", "Dairy/Eggs", "Vegetables", "Herbs"],
+        coordinates: {
+            longitude: "-80.3628",
+            latitude: "35.3848"
+        }
+    },
+    {
+        id: "t--d-charolais-china-grove-north-carolina",
+        name: "T & D Charolais",
+        website: "",
+        location: "China Grove, North Carolina",
+        address: "790 Ed Deal Road",
+        description:"We are now offering pasture raised pork and chicken!!",
+        pictureURL: "https://lh-images.us-east-1.linodeobjects.com//17485.jpg",
+        primaryFarmerInfo: {
+            name: "Todd Mauldin",
+            contact: "(704) 855-2697",
+            pictureURL: ""
+        },
+        allProducts: ["organic-pork", "beef", "organic-chicken"],
+        categories: ["Meats/Livestock"],
+        coordinates: {
+            longitude: "-80.6609",
+            latitude: "35.6006"
+        }
+    },
+    {
+        id: "puddle-moon-farm-edgemoor-south-carolina",
+        name: "Puddle Moon Farm",
+        website: "http://www.puddlemoonfarm.com",
+        location: "Edgemoor, South Carolina",
+        address: "4354 Simpson Rd",
+        description:"We raise grass fed beef and pastured pork in a natural setting where the animals can enjoy a healthy lifestyle the way God intended. Our cows are primarily heritage breed Red Devon and pigs are heritage breed Berkshire and Tamworth. The cows and pigs are rotated to new paddocks regularly. ",
+        pictureURL: "https://lh-images.us-east-1.linodeobjects.com//4edc497e-83b3-4d43-9024-98fbb694f238.jpg",
+        primaryFarmerInfo: {
+            name: "DeAnn Harris",
+            contact: "(803) 487-7106",
+            pictureURL: ""
+        },
+        allProducts: ["organic-pork", "beef"],
+        categories: ["Meats/Livestock"],
+        coordinates: {
+            longitude: "-80.9911",
+            latitude: "34.7695"
+        }
+    },
+    {
+        id: "windy-hill-farm-new-london-north-carolina",
+        name: "Windy Hill Farm",
+        website: "http://www.WindyHillFarmNC.com",
+        location: "New London, North Carolina",
+        address: "20735 Bear Creek Church Rd",
+        description:"Howdy Friends!",
+        pictureURL: "https://lh-images.us-east-1.linodeobjects.com//7568.jpg",
+        primaryFarmerInfo: {
+            name: "Charles & Dana Burrage",
+            contact: "(704) 463-0338",
+            pictureURL: ""
+        },
+        allProducts: ["organic-duck", "organic-pork", "beef", "organic-chicken", "organic-rabbit", "organic-turkey", "pastured-eggs", "organic-lamb"],
+        categories: ["Dairy/Eggs", "Specialty Items", "Meats/Livestock"],
+        coordinates: {
+            longitude: "-80.3199",
+            latitude: "35.4014"
+        }
+    },
+    {
+        id: "mary-l-farm-mount-ulla-north-carolina",
+        name: "Mary L Farm",
+        website: "http://marylfarm.com",
+        location: "Mount Ulla, North Carolina",
+        address: "155 Parkers Loop",
+        description:"Thanksgiving Turkeys",
+        pictureURL: "https://lh-images.us-east-1.linodeobjects.com//3194.jpg",
+        primaryFarmerInfo: {
+            name: "Richard Parker",
+            contact: "(704) 363-7625",
+            pictureURL: ""
+        },
+        allProducts: ["pastured-eggs", "organic-pork", "beef", "organic-chicken", "organic-turkey"],
+        categories: ["Meats/Livestock", "Dairy/Eggs"],
+        coordinates: {
+            longitude: "-80.7397",
+            latitude: "35.6546"
+        }
+    },
+    {
+        id: "dellinger-family-farms-llc-cherryville-north-carolina",
+        name: "Dellinger Family Farms, LLC",
+        website: "http://www.dellingerfamilyfarms.com",
+        location: "Cherryville, North Carolina",
+        address: "643 J.C. Dellinger Road",
+        description:"Dellinger Family Farms is a small family farm which produces heirloom and open-pollinated fresh vegetables, as well as pasture-raised proteins. We specialize in sustainably grown Italian lettuces, Tuscan (Black) kale and other hard to find fresh vegetables for the discriminating customer. We are known across the area for our incredible sweet corn. We also have chicken, lamb, and beef naturally raised on pasture.      ",
+        pictureURL: "https://lh-images.us-east-1.linodeobjects.com//2248e1ee-98d3-42e4-a51b-09a44df5dc0b.jpg",
+        primaryFarmerInfo: {
+            name: "Chris Dellinger",
+            contact: "(980) 429-6760",
+            pictureURL: ""
+        },
+        allProducts: ["beef", "arugula", "spinach", "kale", "cucumber", "sweet-peppers", "sweet-corn", "organic-lamb", "tomatoes", "potatoes", "cantaloupes", "asparagus", "okra", "watermelons", "winter-squash", "hot-peppers", "salad-mix", "organic-chicken", "preserves", "collards", "radishes", "peas", "carrots", "beets", "lettuce", "green-beans", "mustard-greens", "salad-greens", "turnips", "onions", "summer-squash"],
+        categories: ["Processed", "Meats/Livestock", "Vegetables", "Specialty Items", "Fruits"],
+        coordinates: {
+            longitude: "-81.3759",
+            latitude: "35.3617"
+        }
+    },
+    {
+        id: "hartsell-farms-salisbury-north-carolina",
+        name: "Hartsell Farms",
+        website: "http://www.hartsellfarms.com",
+        location: "Salisbury, North Carolina",
+        address: "975 Patterson Rd.",
+        description:"Hartsell Farms is a recognized NCDA century farm. We raise endangered heritage breeds of animals. The Belted Galloway cattle, that is known for their exceptionally lean and flavorful meat. The Tennessee Fainting goat and the rare Gulf Coast sheep. In order to help these breeds survive they will have to be once again, intergrated back into our economy.",
+        pictureURL: "https://lh-images.us-east-1.linodeobjects.com//10208.jpg",
+        primaryFarmerInfo: {
+            name: "Mark and Melody Hartsell",
+            contact: "(704) 202-9260",
+            pictureURL: ""
+        },
+        allProducts: ["organic-goat", "organic-lamb", "beef"],
+        categories: ["Meats/Livestock"],
+        coordinates: {
+            longitude: "-80.6067",
+            latitude: "35.6414"
+        }
+    },
+    {
+        id: "watson-farms-pastured-meats-chester-south-carolina",
+        name: "Watson Farms Pastured Meats",
+        website: "http://www.watsonfarmsbeef.com/",
+        location: "Chester, South Carolina",
+        address: "713 Colony Road",
+        description:"We are a family farm located near Lowrys, SC, producing grass-fed beef, pastured chicken, pastured eggs and pastured pork.  Our beef animals are 100% grass-fed and grass-finished and never receive antibiotics, added-hormones, grain, or anything other than grass, mineral and fresh water and hay when necessary.  Our chickens and pigs receive a non-GMO grain supplement in addition to their pasture.  Visit http://www.watsonfarmsbeef.com/ for more information.      ",
+        pictureURL: "https://lh-images.us-east-1.linodeobjects.com//540566e2-6237-4ccf-9f6f-bf394832cfbc.jpg",
+        primaryFarmerInfo: {
+            name: "Kelly Watson",
+            contact: "(803) 581-8926",
+            pictureURL: ""
+        },
+        allProducts: ["beef", "organic-pork", "pastured-eggs", "organic-chicken"],
+        categories: ["Meats/Livestock", "Dairy/Eggs"],
+        coordinates: {
+            longitude: "-81.2135",
+            latitude: "34.8118"
+        }
+    },
+    {
+        id: "spellcast-farm-lincolnton-north-carolina",
+        name: "Spellcast Farm",
+        website: "",
+        location: "Lincolnton, North Carolina",
+        address: "",
+        description:"Spellcast Farm is a small, diversified, sustainable farm located in Western North Carolina.  Product availability is seasonable and includes raw milk (for animal consumption); raw milk cheeses, yogurt, buttermilk and kefir (for animal consumption), eggs from fully pastured heritage breed hens, meat from pastured heritage breed chickens (we do not use chicken tractors for our meat birds, they are true farm birds ranging over 25 acres, meat from milk and grass-fed goat kids, grass-fed beef, pastured heritage rabbits (American Chinchilla and Silver Fox) and organic vegetables.  All animals are fed a diet that is corn, soy and GMO-free.  Some is organic, much is local.  In 2012 we became Animal Welfare Approved.      ",
+        pictureURL: "https://lh-images.us-east-1.linodeobjects.com//3522.jpg",
+        primaryFarmerInfo: {
+            name: "Michelle Bernard",
+            contact: "(704) 530-7080",
+            pictureURL: ""
+        },
+        allProducts: ["beans", "carrots", "green-beans", "organic-goat", "sweet-corn", "sweet-peppers", "salad-greens", "organic-chicken", "cucumber", "organic-rabbit", "eggplant", "tomatoes", "beets", "summer-squash", "winter-squash", "beef", "organic-duck", "peas", "rutabagas", "zucchini", "salad-mix", "arugula", "pastured-eggs", "cheese", "raw-milk", "buttermilk", "lettuce", "spinach"],
+        categories: ["Meats/Livestock", "Dairy/Eggs", "Herbs", "Vegetables"],
+        coordinates: {
+            longitude: "-81.2801",
+            latitude: "35.5609"
+        }
+    },
+    {
     id: "coon-rock-farm-hillsborough-north-carolina",
     name: "Coon Rock Farm",
     website: "http://www.coonrockfarm.com",

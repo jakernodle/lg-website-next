@@ -150,8 +150,12 @@ function FarmSearchBar(props){
                         const lat = parseFloat(placeDetails.geometry.location.lat())
                         const long = parseFloat(placeDetails.geometry.location.lng())
                         if (window.location.pathname == url){
-                            props.setLatAndLong(lat,long)
-                            props.setLocation(placeDetails.name)
+                            //props.setLatAndLong(lat,long)
+                            //props.setLocation(placeDetails.name)
+                            router.push({
+                                pathname:url,
+                                query: { place: placeDetails.name, lat: lat, long: long }
+                            })
                         }else{
                             router.push({
                                 pathname:url,
@@ -175,10 +179,14 @@ function FarmSearchBar(props){
                     const lat = parseFloat(placeDetails.geometry.location.lat())
                     const long = parseFloat(placeDetails.geometry.location.lng())
                     if (window.location.pathname == url){
-                        props.setLatAndLong(lat,long)
-                        props.setLocation(placeName)
+                        //props.setLatAndLong(lat,long)
+                        //props.setLocation(placeName)
                         setSearchText(placeName)
-                        console.log(placeDetails)
+                        //console.log(placeDetails)
+                        router.push({
+                            pathname:url,
+                            query: { place: placeDetails.name, lat: lat, long: long }
+                        })
                     }else{
                         router.push({
                             pathname:url,
@@ -224,11 +232,12 @@ function FarmSearchBar(props){
                             paddingRight: '16px',
                         }} onClick={()=>{
                             const url = '/farms'
-                            if (window.location.pathname == url){
-                                window.location.reload();
-                            }else{
-                                router.push(url)
-                            }
+                            //if (window.location.pathname == url){
+                             //   window.location.reload();
+                            //}else{
+                                router.push(url, null, { shallow: false })
+                                //window.location.reload();
+                            //}
                         }}>Use my location</Button>
                     </div>
                     <Popper style={placePredictions.length > 0 ? styles.popper : styles.emptyPopper} placement="bottom-start" anchorEl={anchorEl} id={popperOpen ? 'simple-popper': undefined} open={popperOpen}>
