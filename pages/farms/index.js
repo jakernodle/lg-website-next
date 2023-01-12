@@ -136,7 +136,7 @@ function Farms({farms, place}){
                 <title>{ "Showing farms near " + location }</title>
                 <meta
                     name="description"
-                    content= {"Search for North Carolina farms selling meat, produce, and dairy."}
+                    content= {"Search for " + location + " farms selling meat, produce, and dairy."}
                     key="desc"
                 />
             </Head>

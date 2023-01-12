@@ -50,10 +50,10 @@ function Farm({ farm }){
                 <title>{ "See what" + farm.name + "is selling and place an order."}</title>
                 <meta
                     name="description"
-                    content= {farm.description}
+                    content= {farm.description != "" ? farm.description : ("Showing products and contact info for" + farm.name)}
                     key="desc"
                 />
-                <meta name="keywords" content={farm.allProducts.join(", ")} />
+                <meta name="keywords" content={farm.location + farm.allProducts.join(", ")} />
                 <meta name="geo.placename" content={farm.location} />
                 <meta name="geo.position" content={farm.coordinates.latitude + ";" + farm.coordinates.longitude} />
                 <meta name="geo.region" content="North Carolina" />
