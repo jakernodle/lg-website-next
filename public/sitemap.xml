@@ -39,6 +39,55 @@
 
    </url>
 
+      <!-- Blog URL's -->
+      <url>
+
+      <loc>https://blog.locallygrown.app/top-5-farms-and-csa-programs-near-raleigh-nc</loc>
+
+      <lastmod>2022-12-17</lastmod>
+
+      <changefreq>weekly</changefreq>
+
+      <priority>0.8</priority>
+
+   </url>
+
+   <url>
+
+      <loc>https://blog.locallygrown.app/raw-milk-near-me</loc>
+
+      <lastmod>2022-12-17</lastmod>
+
+      <changefreq>weekly</changefreq>
+
+      <priority>0.8</priority>
+
+   </url>
+
+   <url>
+
+      <loc>https://blog.locallygrown.app/fresh-eggs-near-me</loc>
+
+      <lastmod>2022-12-17</lastmod>
+
+      <changefreq>weekly</changefreq>
+
+      <priority>0.8</priority>
+
+   </url>
+
+   <url>
+
+      <loc>https://blog.locallygrown.app/connect-with-local-farmers-on-locallygrown</loc>
+
+      <lastmod>2022-12-17</lastmod>
+
+      <changefreq>weekly</changefreq>
+
+      <priority>0.8</priority>
+
+   </url>
+
    <!-- Search Location URL's -->
    <url>
 
